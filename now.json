@@ -1,0 +1,14 @@
+{
+  "name": "5se7en.com",
+  "alias": [
+    "5se7en.com",
+    "www.5se7en.com"
+  ],
+  "env": {
+    "NEWRELIC_KEY": "@nuxt-newrelic-key",
+    "TIMBER_KEY": "@nuxt-timber-key",
+    "SENTRY_PUBLIC_KEY": "@nuxt-sentry-public-key",
+    "SENTRY_PRIVATE_KEY": "@nuxt-sentry-private-key",
+    "SENTRY_PROJECT_ID": "@nuxt-sentry-project-id"
+  }
+}

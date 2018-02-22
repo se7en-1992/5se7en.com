@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# other
+.nuxt
+dist
+.vscode
+.idea
+newrelic_agent.log
+tree.md
+.DS_Store
