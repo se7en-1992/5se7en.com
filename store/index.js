@@ -9,9 +9,8 @@ const store = () => new Vuex.Store({
       qq: 'QQ'
     },
     visibleHeader: false,
-    visibleAffix: false,
-    apiURI: 'https://docs.api.nuxtjs.org',
-    locale: 'en',
+    apiURI: '',
+    locale: 'cn',
     lang: {
       links: {
         homepage: '返回首页'
