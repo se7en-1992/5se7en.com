@@ -7,7 +7,7 @@
       </dl>
     </div>
     <div class="ContentOne__like ContentOne__div">
-      <a href="javascript:void(0);" id="like" class="ContentOne__like__Abtn">{{ $store.state.contentOne.likes }}</a><span class="ContentOne__like__Spanbtn">+1</span>
+      <a @click="toggle" href="javascript:void(0);" id="like" class="ContentOne__like__Abtn" :class="{'ContentOne__like__AbtnBefore': !visible, 'ContentOne__like__AbtnAfter': visible}">{{ $store.state.contentOne.likes }}</a><span class="ContentOne__like__Spanbtn" :class="{'ContentOne__like__SpanbtnShow': visible}">+1</span>
     </div>
     <div class="ContentOne__views ContentOne__div">
       <dl>
@@ -21,7 +21,21 @@
 <script>
 
 
-
+export default {
+  computed: {
+    visible() { return this.$store.state.visibleLike }
+  },
+  methods: {
+    toggle() {
+      if (this.$store.state.visibleLike) {
+        alert(111)
+      }else{
+        this.$store.commit('toggle', 'visibleLike')
+        //this.$store.commit('setContentOne', '')
+      }
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -53,7 +67,6 @@
     &__Abtn{
       display: inline-block;
       border: 0;
-      background: url(~/static/like.png) no-repeat;
       width: 117px;
       height: 117px;
       color: #fff;
@@ -62,12 +75,23 @@
       font-family: cursive;
       cursor: pointer;
     }
+    &__AbtnBefore{
+      background: url(~/static/like.png) no-repeat;
+    }
+    &__AbtnAfter{
+      background: url(~/static/like.png) no-repeat;
+      animation: bgChange .5s;
+    }
     &__Spanbtn{
       position: absolute;
       top: 80px;
       left: 52%;
       color: #fff;
       z-index: -1;
+    }
+    &__SpanbtnShow{
+      z-index: -1;
+      animation: spanShow .5s forwards;
     }
   }
   &__views{
@@ -80,5 +104,24 @@
     }
   }
 
+}
+@keyframes bgChange {
+  100% {
+    background: url(~/static/zan.png) no-repeat;
+  }
+}
+@keyframes spanShow {
+  0% {
+    top: 80px;
+    z-index: 0;
+  }
+  90% {
+    top: 10px;
+    z-index: 0;
+  }
+  100% {
+    top: 0;
+    z-index: -1;
+  }
 }
 </style>

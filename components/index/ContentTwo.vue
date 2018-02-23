@@ -4,16 +4,16 @@
       <div class="ContentTwo__div__pic">
         <dl class="ContentTwo__div__pic__dl">
           <dt><img src="~/static/se7en.jpg" alt="se7en"></dt>
-          <dd class="ContentTwo__div__pic__dl__dd">Front end developer, <br>
-            Mr Se7en Wang
+          <dd class="ContentTwo__div__pic__dl__dd">{{ $store.state.contentTwo.position }}<br>
+            {{ $store.state.contentTwo.name }}
           </dd>
         </dl>
       </div>
       <div class="ContentTwo__div__introduction">
-        <h3 class="ContentTwo__div__introduction__h3">自我描述</h3>
-        <p style="margin-top: 55px;" class="ContentTwo__div__introduction__p">我是一名前端开发的求知者，渴求学习更多的前端技能充实自己，不断完善提高自己，学习能力较强，逻辑能力较好。</p>
-        <p class="ContentTwo__div__introduction__p">团队合作能力较好，有梦想有追求的前端工程师，对新鲜事物有很强的好奇心，学习能力较强，性格乐观、内敛，平时</p>
-        <p class="ContentTwo__div__introduction__p">喜欢锻炼、看电影、打一些团队配合竞技游戏，注重效率，对技术有热情。</p>
+        <h3 class="ContentTwo__div__introduction__h3">{{ $store.state.contentTwo.description.self }}</h3>
+        <p style="margin-top: 55px;" class="ContentTwo__div__introduction__p">{{ $store.state.contentTwo.description.pOne }}</p>
+        <p class="ContentTwo__div__introduction__p">{{ $store.state.contentTwo.description.pTwo }}</p>
+        <p class="ContentTwo__div__introduction__p">{{ $store.state.contentTwo.description.pThree }}</p>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ const store = () => new Vuex.Store({
       qq: 'QQ'
     },
     visibleHeader: false,
+    visibleLike: false,
     apiURI: 'https://www.hybjf.com',//配置线上接口域名
     lang: {
       links: {
@@ -29,6 +30,16 @@ const store = () => new Vuex.Store({
       github: 'Github',
       likes: 88,
       views: 18834
+    },
+    contentTwo: {
+      position: 'Front end developer',
+      name: '5se7en',
+      description: {
+        self: '自我描述',
+        pOne: '我是一名前端开发的求知者，渴求学习更多的前端技能充实自己，不断完善提高自己，学习能力较强，逻辑能力较好。',
+        pTwo: '团队合作能力较好，有梦想有追求的前端工程师，对新鲜事物有很强的好奇心，学习能力较强，性格乐观、内敛，平时',
+        pThree: '喜欢锻炼、看电影、打一些团队配合竞技游戏，注重效率，对技术有热情。'
+      }
     }
   },
   mutations: {
@@ -38,21 +49,9 @@ const store = () => new Vuex.Store({
     setApiURI(state, apiURI) {
       state.apiURI = apiURI
     },
-    setDocVersion(state, docVersion) {
-      state.docVersion = docVersion
-    },
-    setContentOne(state, likes, views) {
-      state.contentOne.likes = likes
-      state.contentOne.views = views
-    },
-    setLocale(state, locale) {
-      state.locale = locale
-    },
-    setLang(state, lang) {
-      state.lang = lang
-    },
-    setMenu(state, menu) {
-      state.menu = menu
+    setContentOne(state, contentOne) {
+      state.contentOne.likes = contentOne.id
+      state.contentOne.views = contentOne.clicks
     }
   },
   actions: {
@@ -61,8 +60,9 @@ const store = () => new Vuex.Store({
         commit('setApiURI', 'https://www.hybjf.com')//配置测试环境接口地址
       }
       try {
-        const resReleases = await axios(state.apiURI + '/api/crowdfunding/index.html')
-        commit('setContentOne', resReleases.data.RecommendAviation.type, resReleases.data.RecommendAviation.id)
+        const resReleases = await axios(state.apiURI + '/api/fortuneChur/detail.html?id=1417')
+        //console.log(resReleases.data.RecommendAviation.type+"------"+resReleases.data.RecommendAviation.id)
+        commit('setContentOne', resReleases.data.detail)
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the API server.') // eslint-disable-line no-console
       }
