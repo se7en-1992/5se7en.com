@@ -9,14 +9,12 @@ const store = () => new Vuex.Store({
       qq: 'QQ'
     },
     visibleHeader: false,
-    apiURI: '',
-    locale: 'cn',
+    apiURI: 'https://www.hybjf.com',//配置线上接口域名
     lang: {
       links: {
         homepage: '返回首页'
       }
     },
-    menu: {},
     navList: {
       project: { text: '曾经项目' , to: '/projects'},
       share: { text: '技术分享' , to: '/share'},
@@ -26,6 +24,11 @@ const store = () => new Vuex.Store({
       frame: { text: '框架学习' , to: '/frame'},
       html5: { text: 'html5' , to: '/html5'},
       contact: { text: '联系反馈' , to: '/contact'}
+    },
+    contentOne: {
+      github: 'Github',
+      likes: 88,
+      views: 18834
     }
   },
   mutations: {
@@ -38,8 +41,9 @@ const store = () => new Vuex.Store({
     setDocVersion(state, docVersion) {
       state.docVersion = docVersion
     },
-    setGhVersion(state, ghVersion) {
-      state.ghVersion = ghVersion
+    setContentOne(state, likes, views) {
+      state.contentOne.likes = likes
+      state.contentOne.views = views
     },
     setLocale(state, locale) {
       state.locale = locale
@@ -49,6 +53,19 @@ const store = () => new Vuex.Store({
     },
     setMenu(state, menu) {
       state.menu = menu
+    }
+  },
+  actions: {
+    async nuxtServerInit({ state, commit }, { isDev, req, redirect }) {
+      if (isDev) {
+        commit('setApiURI', 'https://www.hybjf.com')//配置测试环境接口地址
+      }
+      try {
+        const resReleases = await axios(state.apiURI + '/api/crowdfunding/index.html')
+        commit('setContentOne', resReleases.data.RecommendAviation.type, resReleases.data.RecommendAviation.id)
+      } catch (e) {
+        console.error('Error on [nuxtServerInit] action, please run the API server.') // eslint-disable-line no-console
+      }
     }
   }
 })

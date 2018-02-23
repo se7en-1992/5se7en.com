@@ -2,17 +2,17 @@
   <div class="ContentOne">
     <div class="ContentOne__github ContentOne__div">
       <dl class="ContentOne__github__dl">
-        <dt class="ContentOne__github__dl__dt">Github</dt>
+        <dt class="ContentOne__github__dl__dt">{{ $store.state.contentOne.github }}</dt>
         <dd><a href="https://github.com/se7en-1992" target="_blank"><img src="~/static/github.jpg" style="width: 90px;"></a></dd>
       </dl>
     </div>
     <div class="ContentOne__like ContentOne__div">
-      <a href="javascript:void(0);" id="like" class="ContentOne__like__Abtn">88</a><span class="ContentOne__like__Spanbtn">+1</span>
+      <a href="javascript:void(0);" id="like" class="ContentOne__like__Abtn">{{ $store.state.contentOne.likes }}</a><span class="ContentOne__like__Spanbtn">+1</span>
     </div>
     <div class="ContentOne__views ContentOne__div">
       <dl>
         <dt class="ContentOne__views__dt">网站总访问量</dt>
-        <dd class="ContentOne__views__dd"><span class="totalInvest">18834</span></dd>
+        <dd class="ContentOne__views__dd"><span class="totalInvest">{{ $store.state.contentOne.views }}</span></dd>
       </dl>
     </div>
   </div>
