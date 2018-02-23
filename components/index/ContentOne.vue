@@ -31,7 +31,7 @@ export default {
         alert(111)
       }else{
         this.$store.commit('toggle', 'visibleLike')
-        //this.$store.commit('setContentOne', '')
+        this.$store.commit('setContentOne', {id: this.$store.state.contentOne.likes+1, clicks: this.$store.state.contentOne.views})
       }
     }
   },
