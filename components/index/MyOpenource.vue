@@ -4,9 +4,9 @@
     <div class="Openource__service">
       <div class="Openource__service__div">
         <ul>
-          <li style="margin-top:80px;">使用 NodeJS + Express + MongoDB +上线环境部署 搭建H5抽奖活动页面</li>
-          <li>前端基础知识分享</li>
-          <li>QRcode二维码生成</li>
+          <li v-for="(repositorie, index) in $store.state.openource.repositories">
+            <a :href=" repositorie.link ">{{ repositorie.description }}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -47,9 +47,12 @@
           margin-left: 70px;
           line-height: 36px;
           list-style-type: disc;
+          a{
+            color: #fff;
+          }
         }
         li:first-child{
-          margin-top: 40px;
+          margin-top: 80px;
         }
       }
     }

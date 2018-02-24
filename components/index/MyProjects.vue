@@ -2,57 +2,25 @@
   <div class="Projects">
     <h3 class="Projects__h3">部分项目介绍</h3>
     <div class="Projects__proLists">
-      <a href="https://www.hybjf.com/" class="Projects__proLists__linkId" target="_blank">
-        <dl class="Projects__proLists__linkId__dl">
-          <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
-          <dd>
-            <p class="Projects__proLists__linkId__dl__title">好友邦金服官网</p>
-            <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">已上线</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">Node+express</span></p>
-          </dd>
-        </dl>
-      </a>
-      <a href="https://www.hybjf.com/wx/" class="Projects__proLists__linkId" target="_blank">
-        <dl class="Projects__proLists__linkId__dl">
-          <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
-          <dd>
-            <p class="Projects__proLists__linkId__dl__title">好友邦金服微信端</p>
-            <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">已上线</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">Node+express+h5</span></p>
-          </dd>
-        </dl>
-      </a>
-      <a href="http://www.5se7en.com/" class="Projects__proLists__linkId" target="_blank">
-        <dl class="Projects__proLists__linkId__dl">
-          <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
-          <dd>
-            <p class="Projects__proLists__linkId__dl__title">个人网站</p>
-            <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">已上线</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">Node+express+nuxtjs</span></p>
-          </dd>
-        </dl>
-      </a>
-      <a href="https://www.hybjf.com/api/help/Chinese.html#page/1" class="Projects__proLists__linkId" target="_blank">
-        <dl class="Projects__proLists__linkId__dl">
-          <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
-          <dd>
-            <p class="Projects__proLists__linkId__dl__title">逼真的翻书页效果</p>
-            <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">已上线</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">Canvas+h5</span></p>
-          </dd>
-        </dl>
-      </a>
-      <a href="https://www.hybjf.com/game/20170925Activity" class="Projects__proLists__linkId" target="_blank">
-        <dl class="Projects__proLists__linkId__dl">
-          <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
-          <dd>
-            <p class="Projects__proLists__linkId__dl__title">H5套马游戏</p>
-            <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">已上线</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">Phaser+h5</span></p>
-          </dd>
-        </dl>
-      </a>
+      <template v-for="(project, index) in $store.state.projects.part">
+        <a :href=" project.url " class="Projects__proLists__linkId" target="_blank">
+          <dl class="Projects__proLists__linkId__dl">
+            <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
+            <dd>
+              <p class="Projects__proLists__linkId__dl__title">{{ project.name }}</p>
+              <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">{{ project.version }}</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">{{ project.technology }}</span></p>
+            </dd>
+          </dl>
+        </a>
+      </template>
     </div>
   </div>
 </template>
 
 <script>
+export default {
 
+}
 </script>
 
 <style lang="scss" scoped>
