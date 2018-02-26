@@ -36,6 +36,7 @@ module.exports = {
     }
   },
   plugins: [
+    '@/plugins/element-ui',
     { src: '~/plugins/ga.js', ssr: false }
   ],
   build: {

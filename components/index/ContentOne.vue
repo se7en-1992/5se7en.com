@@ -15,6 +15,19 @@
         <dd class="ContentOne__views__dd"><span class="totalInvest">{{ $store.state.contentOne.views }}</span></dd>
       </dl>
     </div>
+    <div>
+      <el-dialog
+        title="提示"
+        :visible.sync="dialogVisible"
+        width="30%"
+        :before-close="handleClose">
+        <span>谢谢您的支持，您今天已经点过赞啦～</span>
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="dialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+        </span>
+      </el-dialog>
+    </div>
   </div>
 </template>
 
@@ -22,13 +35,18 @@
 import axios from 'axios'
 
 export default {
+  data() {
+    return {
+      dialogVisible: false
+    };
+  },
   computed: {
     visible() { return this.$store.state.visibleLike }
   },
   methods: {
     toggle() {
       if (this.$store.state.visibleLike) {
-        alert(111)
+        this.dialogVisible = true;
       }else{
         this.$store.commit('toggle', 'visibleLike')
         const contentOne = {}
@@ -41,12 +59,21 @@ export default {
           this.$store.commit('setContentOne', contentOne)
         })
       }
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+        .then(_ => {
+          done();
+        })
+        .catch(_ => {});
     }
   },
 }
 </script>
 
 <style lang="scss" scoped>
+@import url("//unpkg.com/element-ui@2.2.0/lib/theme-chalk/index.css");
+
 .ContentOne{
   margin: 20px 0px;
   height: 117px;
