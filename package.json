@@ -4,6 +4,7 @@
   "description": "5se7en's personal website---永远怀着谦逊的心，智慧意味着自知无知，致力于分享前端知识，让自己和大家能够在前端的道路上越走越远。",
   "main": "index.js",
   "dependencies": {
+    "@nuxtjs/axios": "5.0.1",
     "axios": "^0.16.2",
     "express": "^4.16.2",
     "highlight.js": "^9.12.0",

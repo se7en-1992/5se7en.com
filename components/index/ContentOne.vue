@@ -19,7 +19,7 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 
 export default {
   computed: {
@@ -31,7 +31,15 @@ export default {
         alert(111)
       }else{
         this.$store.commit('toggle', 'visibleLike')
-        this.$store.commit('setContentOne', {id: this.$store.state.contentOne.likes+1, clicks: this.$store.state.contentOne.views})
+        const contentOne = {}
+        console.log(this.$store.state.contentOne.id);
+        axios.get('/hybjf/api/fortuneChur/detail.html?id=' + this.$store.state.contentOne.id)
+        .then((res) => {
+          contentOne.likes = res.data.detail.clicks + 1
+          contentOne.id = this.$store.state.contentOne.id
+          contentOne.clicks = this.$store.state.contentOne.clicks
+          this.$store.commit('setContentOne', contentOne)
+        })
       }
     }
   },

@@ -17,12 +17,24 @@ module.exports = {
     '~assets/scss/main.scss'
   ],
   modules: [
+    '@nuxtjs/axios',
     ['~/modules/sentry', {
       project_id: process.env.SENTRY_PROJECT_ID,
       public_key: process.env.SENTRY_PUBLIC_KEY,
       private_key: process.env.SENTRY_PRIVATE_KEY
     }]
   ],
+  axios: {
+    proxy: true,
+    prefix: '/hybjf'
+    // See https://github.com/nuxt-community/axios-module#options
+  },
+  proxy: {
+    '/hybjf': {
+      target: (process.env.NODE_ENV === 'production') ? 'https://www.hybjf.com' : 'https://www.hybjf.com',
+      pathRewrite: { '^/hybjf': '' }
+    }
+  },
   plugins: [
     { src: '~/plugins/ga.js', ssr: false }
   ],

@@ -28,8 +28,9 @@ const store = () => new Vuex.Store({
     },
     contentOne: {
       github: 'Github',
-      likes: 88,
-      views: 18834
+      likes: 0,
+      id: 0,
+      views: 0
     },
     contentTwo: {
       position: 'Front end developer',
@@ -66,7 +67,8 @@ const store = () => new Vuex.Store({
       state.apiURI = apiURI
     },
     setContentOne(state, contentOne) {
-      state.contentOne.likes = contentOne.id
+      state.contentOne.likes = contentOne.likes
+      state.contentOne.id = contentOne.id
       state.contentOne.views = contentOne.clicks
     }
   },
@@ -76,9 +78,15 @@ const store = () => new Vuex.Store({
         commit('setApiURI', 'https://www.hybjf.com')//配置测试环境接口地址
       }
       try {
-        const resReleases = await axios(state.apiURI + '/api/fortuneChur/detail.html?id=1417')
+        const likes = await axios(state.apiURI + '/api/fortuneChur/top.html')
+        const clicks = await axios(state.apiURI + '/api/fortuneChur/detail.html?id=1417')
+        const contentOne = {
+          likes: likes.data[0].clicks,
+          id: likes.data[0].id,
+          clicks: clicks.data.detail.clicks
+        }
         //console.log(resReleases.data.RecommendAviation.type+"------"+resReleases.data.RecommendAviation.id)
-        commit('setContentOne', resReleases.data.detail)
+        commit('setContentOne', contentOne)
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the API server.') // eslint-disable-line no-console
       }
