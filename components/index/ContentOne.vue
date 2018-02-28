@@ -55,7 +55,7 @@ export default {
         .then((res) => {
           contentOne.likes = res.data.detail.clicks + 1
           contentOne.id = this.$store.state.contentOne.id
-          contentOne.clicks = this.$store.state.contentOne.clicks
+          contentOne.clicks = this.$store.state.contentOne.views
           this.$store.commit('setContentOne', contentOne)
         })
       }

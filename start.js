@@ -6,6 +6,7 @@ const express = require('express')
 const { existsSync } = require('fs')
 const { resolve } = require('path')
 const { Nuxt } = require('nuxt')
+const config = require('./package.json')
 
 const options = require('./nuxt.config')
 // Force production mode (no webpack middleware called)
