@@ -35,12 +35,6 @@
     "push-dir": "^0.4.1",
     "sass-loader": "^6.0.6"
   },
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "port": "5757"
-    }
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

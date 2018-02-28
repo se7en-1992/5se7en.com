@@ -35,7 +35,7 @@ if (!existsSync(distDir)) {
   process.exit(1)
 }
 
-const port = process.env.PORT || production.PORT || process.env.npm_package_config_nuxt_port
-const host = process.env.HOST || production.HOST || process.env.npm_package_config_nuxt_host
+const port = process.env.PORT || production.PORT
+const host = process.env.HOST || production.HOST
 
 nuxt.listen(port, host)
