@@ -1,4 +1,5 @@
 const package = require('./package.json')
+const production = require('./config/production')
 module.exports = {
   head: {
     title: '5se7en\'s personal website',
@@ -19,9 +20,9 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     ['~/modules/sentry', {
-      project_id: process.env.SENTRY_PROJECT_ID,
-      public_key: process.env.SENTRY_PUBLIC_KEY,
-      private_key: process.env.SENTRY_PRIVATE_KEY
+      project_id: process.env.SENTRY_PROJECT_ID || production.SENTRY_PROJECT_ID,
+      public_key: process.env.SENTRY_PUBLIC_KEY || production.SENTRY_PUBLIC_KEY,
+      private_key: process.env.SENTRY_PRIVATE_KEY || production.SENTRY_PRIVATE_KEY
     }]
   ],
   axios: {
