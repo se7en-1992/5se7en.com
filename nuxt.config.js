@@ -32,7 +32,7 @@ module.exports = {
   },
   proxy: {
     '/hybjf': {
-      target: (process.env.NODE_ENV === 'production') ? 'https://www.hybjf.com' : 'https://www.hybjf.com',
+      target: (process.env.NODE_ENV === 'production') ? production.porductionProxy : production.developmentProxy,
       pathRewrite: { '^/hybjf': '' }
     }
   },

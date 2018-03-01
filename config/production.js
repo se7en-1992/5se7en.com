@@ -5,5 +5,7 @@ module.exports = {
   TIMBER_KEY: '',
   SENTRY_PROJECT_ID: '',
   SENTRY_PUBLIC_KEY: '',
-  SENTRY_PRIVATE_KEY: ''
+  SENTRY_PRIVATE_KEY: '',
+  porductionProxy: 'https://www.hybjf.com',
+  developmentProxy: 'https://www.hybjf.com'
 };
