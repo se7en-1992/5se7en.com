@@ -10,6 +10,8 @@ const { Nuxt } = require('nuxt')
 const config = require('./package.json')
 
 const options = require('./nuxt.config')
+
+const app = express()
 // Force production mode (no webpack middleware called)
 options.dev = false
 // Add Timber logging middleware
@@ -19,9 +21,8 @@ if (process.env.TIMBER_KEY || production.TIMBER_KEY) {
   const transport = new timber.transports.HTTPS(timber_key)
   timber.install(transport)
   if (!options.serverMiddleware) options.serverMiddleware = []
-  const timberMiddleware = express()
-  timberMiddleware.use(timber.middlewares.express())
-  options.serverMiddleware.push({ path: '/', handler: timberMiddleware })
+  app.use(timber.middlewares.app)
+  options.serverMiddleware.push({ path: '/', handler: app })
 } else {
   console.warn('Timber.io is disabled (TIMBER_KEY not found)') // eslint-disable-line no-console
 }
