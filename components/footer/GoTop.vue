@@ -46,6 +46,10 @@ export default {
 <style lang="scss" scoped>
   .GoTop{
     margin-bottom: 20px;
+    @media (max-width: 991px)
+    {
+      display:none;
+    }
     &__topArrow{
       text-align: center;
       margin-bottom: 20px;

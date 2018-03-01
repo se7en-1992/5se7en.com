@@ -17,6 +17,10 @@
   .FootNav{
     height: 55px;
     background: url(~static/color-earth.png) no-repeat left center #a40000;
+    @media (max-width: 991px)
+    {
+      display:none;
+    }
     ul{
       height: 55px;
       width: 628px;

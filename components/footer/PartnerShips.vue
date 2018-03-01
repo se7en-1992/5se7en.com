@@ -30,6 +30,10 @@ export default {
     font-weight: bold;
     text-align: center;
     line-height: 50px;
+    @media (max-width: 991px)
+    {
+      display:none;
+    }
   }
 }
 </style>

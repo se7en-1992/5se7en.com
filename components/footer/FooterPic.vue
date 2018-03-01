@@ -24,6 +24,10 @@
   padding-bottom: 45px;
   width: 1365px;
   margin: 0 auto;
+  @media (max-width: 991px)
+  {
+    display:none;
+  }
   &__top{
     overflow: hidden;
     width: 1365px;

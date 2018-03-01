@@ -16,6 +16,10 @@
 
 <style lang="scss" scoped>
 .PartnerPic{
+  @media (max-width: 991px)
+  {
+    display:none;
+  }
   &__partner{
     &__partnerLayout{
       width:1280px;
