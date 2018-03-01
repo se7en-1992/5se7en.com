@@ -1,6 +1,6 @@
 # dependencies
 node_modules
-config/*
+config/production.js
 
 # logs
 npm-debug.log
