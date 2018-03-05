@@ -11,6 +11,11 @@ node>=v8.0.0+ (nuxt1.0.0以上版本的node版本号必须大于v8.0.0否则启�
 
 # 开发环境
 
+- Node.js: `^8.9.4`
+- express: `^4.16.2`
+- nuxtjs: `^1.0.0-rc11`
+- vue: `^2.5.3`
+
 ```bash
 npm install
 npm run dev
