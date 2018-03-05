@@ -6,6 +6,6 @@ module.exports = {
   SENTRY_PROJECT_ID: '',
   SENTRY_PUBLIC_KEY: '',
   SENTRY_PRIVATE_KEY: '',
-  porductionProxy: 'https://www.hybjf.com',
-  developmentProxy: 'https://www.hybjf.com'
+  porductionProxy: 'https://www.hybjf.com/api',
+  developmentProxy: 'https://www.hybjf.com/api'
 };
