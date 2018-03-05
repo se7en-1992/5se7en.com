@@ -29,3 +29,7 @@ html
 {
   box-sizing: inherit;
 }
+/* 复写elment-ui样式 */
+.el-message-box__wrapper .el-alertBox{
+  width: 80%;
+}

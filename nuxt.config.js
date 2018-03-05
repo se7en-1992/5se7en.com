@@ -5,7 +5,7 @@ module.exports = {
     title: '5se7en\'s personal website',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: package.description },
       { hid: 'keywords', name: 'keywords', content: package.keywords.join(", ") },
       { hid: 'author', name: 'author', content: package.author },
@@ -27,13 +27,13 @@ module.exports = {
   ],
   axios: {
     proxy: true,
-    prefix: '/hybjf'
+    prefix: '/api'
     // See https://github.com/nuxt-community/axios-module#options
   },
   proxy: {
-    '/hybjf': {
+    '/api': {
       target: (process.env.NODE_ENV === 'production') ? production.porductionProxy : production.developmentProxy,
-      pathRewrite: { '^/hybjf': '' }
+      pathRewrite: { '^/api': '' }
     }
   },
   plugins: [

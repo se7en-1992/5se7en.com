@@ -21,8 +21,8 @@ if (process.env.TIMBER_KEY || production.TIMBER_KEY) {
   const transport = new timber.transports.HTTPS(timber_key)
   timber.install(transport)
   if (!options.serverMiddleware) options.serverMiddleware = []
-  app.use(timber.middlewares.app)
-  options.serverMiddleware.push({ path: '/', handler: app })
+  app.use(timber.middlewares.express())
+  options.serverMiddleware.push({ path: '/', handler: express() })
 } else {
   console.warn('Timber.io is disabled (TIMBER_KEY not found)') // eslint-disable-line no-console
 }

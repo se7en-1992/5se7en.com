@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import { likeAdd } from '../../service/getData'
 
 export default {
   data() {
@@ -50,10 +50,10 @@ export default {
       }else{
         this.$store.commit('toggle', 'visibleLike')
         const contentOne = {}
-        console.log(this.$store.state.contentOne.id);
-        axios.get('/hybjf/api/fortuneChur/detail.html?id=' + this.$store.state.contentOne.id)
+        //console.log(this.$store.state.contentOne.id);
+        likeAdd(this.$store.state.contentOne.id)
         .then((res) => {
-          contentOne.likes = res.data.detail.clicks + 1
+          contentOne.likes = res.detail.clicks + 1
           contentOne.id = this.$store.state.contentOne.id
           contentOne.clicks = this.$store.state.contentOne.views
           this.$store.commit('setContentOne', contentOne)
@@ -67,7 +67,7 @@ export default {
         })
         .catch(_ => {});
     }
-  },
+  }
 }
 </script>
 

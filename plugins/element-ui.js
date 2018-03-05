@@ -1,8 +1,7 @@
 // 按需引入 Element
 import Vue from 'vue'
-import { Button, Dialog } from 'element-ui'
+import ElementUI from 'element-ui'
 
 
 // 引入组件
-Vue.component(Button.name, Button)
-Vue.component(Dialog.name, Dialog)
+Vue.use(ElementUI)
