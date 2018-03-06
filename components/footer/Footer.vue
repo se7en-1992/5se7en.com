@@ -24,5 +24,8 @@ export default {
 <style lang="scss" scoped>
 .Footer{
   margin-top: 20px;
+  @media (max-width: 991px) {
+    margin-top: 0px;
+  }
 }
 </style>

@@ -15,8 +15,7 @@
   overflow: hidden;
   width: 100%;
   @media (max-width: 991px) {
-    position: absolute;
-    bottom: 0;
+    height: 12vh;
   }
   p{
     text-align: center;
@@ -25,7 +24,7 @@
     font-size: 12px;
     line-height: 24px;
     @media (max-width: 991px) {
-      margin-top:0.5rem;
+      margin-top:2vh;
     }
   }
 }

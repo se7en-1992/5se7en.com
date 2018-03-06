@@ -20,13 +20,13 @@ export default {
   line-height: 43px;
   float: left;
   @media (max-width: 991px) {
-    height: 75px;
+    height: 11vh;
   }
   &__Logo {
     display: flex;
     align-items: center;
     @media (max-width: 991px) {
-      height: 75px;
+      height: 11vh;
     }
     &__Img{
       @media (max-width: 991px) {

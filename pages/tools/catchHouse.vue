@@ -246,32 +246,24 @@ export default {
   p:first-child{
     margin-top:75px;
   }
-  div{
-    margin-bottom:18px;
-    color: red;
-    font-size: 12px;
-    text-align: center;
-  }
-  div:first-child{
-    margin-top:75pxrem;
-  }
   @media (max-width: 991px) {
+    height: 66vh;
     p{
       margin:0 auto;
       text-align: center;
-      margin-bottom: .6rem;
+      margin-bottom: 3vh;
       input{
         outline: 0;
-        width: 8.4rem;
-        height: 1.28rem;
-        text-indent: 0.2rem;
+        width: 60vw;
+        height: 6vh;
+        text-indent: 2vw;
         border: 0;
         font-size: .341333rem;
         box-shadow: #c3c1bf 1px 0 1px, #c3c1bf 0 1px 1px, #c3c1bf -1px 0 1px, #c3c1bf 0 -1px 1px;
       }
       button{
-        width: 4rem;
-        height: 1.28rem;
+        width: 30vw;
+        height: 5vh;
         outline: 0;
         border: 0;
         font-size: .341333rem;
@@ -279,16 +271,7 @@ export default {
       }
     }
     p:first-child{
-      margin-top:2.133333rem;
-    }
-    div{
-      margin-bottom:.426667rem;
-      color: red;
-      font-size: .341333rem;
-      text-align: center;
-    }
-    div:first-child{
-      margin-top:2.133333rem;
+      margin-top: 11vh;
     }
   }
 }

@@ -24,6 +24,9 @@ export default {
 <style lang="scss" scoped>
 .PartnerShips{
   margin-top: 40px;
+  @media (max-width: 991px) {
+    margin-top: 0px;
+  }
   h3{
     color: #a40000;
     font-size: 30px;

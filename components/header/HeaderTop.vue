@@ -22,7 +22,7 @@ export default {
 .HeaderTop {
   height: 130px;
   @media (max-width: 991px) {
-    height: 75px;
+    height: 11vh;
   }
 }
 </style>
