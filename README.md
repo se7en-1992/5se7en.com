@@ -1,7 +1,7 @@
 ## 5se7en.com
 
 nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
-项目地址：http://www.5se7en.com/
+项目地址：https://5se7en.com/
 
 ## 注意事项
 

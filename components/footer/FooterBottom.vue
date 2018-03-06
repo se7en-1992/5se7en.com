@@ -15,7 +15,7 @@
   overflow: hidden;
   width: 100%;
   @media (max-width: 991px) {
-    position: absolute;;
+    position: relative;
     bottom: 0;
   }
   p{
