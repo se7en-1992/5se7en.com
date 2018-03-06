@@ -1,7 +1,7 @@
-// 按需引入 Element
 import Vue from 'vue'
-import ElementUI from 'element-ui'
+import Element from 'element-ui'
 
+export default () => {
+  Vue.use(Element)
+}
 
-// 引入组件
-Vue.use(ElementUI)

@@ -15,7 +15,8 @@ module.exports = {
     ]
   },
   css: [
-    '~assets/scss/main.scss'
+    '~assets/scss/main.scss',
+    'element-ui/lib/theme-chalk/index.css'
   ],
   modules: [
     '@nuxtjs/axios',
@@ -41,7 +42,7 @@ module.exports = {
     { src: '~/plugins/ga.js', ssr: false }
   ],
   build: {
-    vendor: ['axios']
+    vendor: ['axios', 'element-ui']
   },
   loading: { color: '#41B883' }
 }

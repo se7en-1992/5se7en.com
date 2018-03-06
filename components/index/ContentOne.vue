@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("//unpkg.com/element-ui@2.2.0/lib/theme-chalk/index.css");
+// @import url("//unpkg.com/element-ui@2.2.0/lib/theme-chalk/index.css");
 
 .ContentOne{
   margin: 20px 0px;
@@ -112,6 +112,8 @@ export default {
     }
     &__AbtnBefore{
       background: url(~/static/like.png) no-repeat;
+      font-family: cursive;
+      font-size: 16px;
     }
     &__AbtnAfter{
       background: url(~/static/like.png) no-repeat;

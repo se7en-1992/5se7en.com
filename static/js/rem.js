@@ -7,18 +7,18 @@
 	  var docEl = doc.documentElement,
 	    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
 	    recalc = function () {
-	    	
+
 	      var clientWidth = docEl.clientWidth;
 	      if (!clientWidth) return;
-	      if (clientWidth>=580) {
-	    	  docEl.style.fontSize ="35px";
+	      if (clientWidth>=991) {
+	    	  docEl.style.fontSize ="";
 	    		  return;
 	      }
-	      //320 是我们默认的手机屏幕 
+	      //320 是我们默认的手机屏幕
 	      //clientWidth 是我们页面打开时所得到的屏幕宽度真实的宽度值
 	      //这两者相除得到一个放大或缩小的比例值
 	      docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-	      //设置根元素font-size 
+	      //设置根元素font-size
 	    };
 	    /*600px
 	    20 * 600/320  -- >  [2 -- 3] 放大范围
