@@ -17,6 +17,7 @@ const store = () => new Vuex.Store({
       }
     },
     navList: {
+      house: { text: '游戏登录' , to: '/tools/catchHouse'},
       project: { text: '曾经项目' , to: '/projects'},
       share: { text: '技术分享' , to: '/share'},
       start: { text: '初涉前端' , to: '/start'},

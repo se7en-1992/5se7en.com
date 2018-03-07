@@ -3,6 +3,11 @@
     <div class="Navsheet__Box">
       <ul class="Navsheet__Box__Menu">
         <li class="Navsheet__Box__Menu__Item">
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.house.to">
+            {{ $store.state.navList.house.text }}
+          </nuxt-link>
+        </li>
+        <li class="Navsheet__Box__Menu__Item">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.project.to">
             {{ $store.state.navList.project.text }}
           </nuxt-link>
