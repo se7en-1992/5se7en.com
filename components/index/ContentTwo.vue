@@ -3,7 +3,7 @@
     <div class="ContentTwo__div">
       <div class="ContentTwo__div__pic">
         <dl class="ContentTwo__div__pic__dl">
-          <dt><img src="~/static/product.jpg" alt="se7en"></dt>
+          <dt><img src="~/static/se7en.jpg" alt="se7en"></dt>
           <dd class="ContentTwo__div__pic__dl__dd">{{ $store.state.contentTwo.position }}<br>
             {{ $store.state.contentTwo.name }}
           </dd>

@@ -9,7 +9,7 @@
 <script>
 import MyHeader from '~/components/header/Header.vue'
 import HeaderNav from '~/components/header/HeaderNav.vue'
-import navSheet from '~/components/header/NavSheet.vue'
+import navSheet from '~/components/header/Navsheet.vue'
 
 export default {
 
