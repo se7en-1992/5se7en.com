@@ -30,7 +30,7 @@ npm run dev
 - [vue2-elm](https://github.com/bailicangdu/vue2-elm)(一个不错的vue2.0个人项目)
 - [nuxtjs.org](https://github.com/nuxt/nuxtjs.org)
 
-##nuxt介绍
+## nuxt介绍
 
 - nuxt详细的入门教程这里不做详细的介绍，[官方文档](https://nuxtjs.org/)讲解的已经非常详细了。这里简单介绍一下项目目录作用
 
