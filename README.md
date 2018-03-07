@@ -36,6 +36,9 @@ npm run dev
 
 ### nuxt目录介绍
 
+- config
+    - 此目录并不是nuxt自身目录而是一些项目经验促使我添加此目录从来更加方便的去管理和使用喔在项目中所需要的变量。
+
 - assets
     - 如果你的静态资源文件需要 Webpack 做构建编译处理，可以放到 assets 目录，否则可以放到 static 目录中去。
     - Nuxt 服务器启动的时候，该目录下的文件会映射至应用的根路径 / 下，像 robots.txt 或 sitemap.xml 这种类型的文件就很适合放到 static 目录中。
