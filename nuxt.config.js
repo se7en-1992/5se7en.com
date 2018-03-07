@@ -16,7 +16,8 @@ module.exports = {
   },
   css: [
     '~assets/scss/main.scss',
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'mint-ui/lib/style.css'
   ],
   modules: [
     '@nuxtjs/axios',
@@ -39,10 +40,11 @@ module.exports = {
   },
   plugins: [
     '@/plugins/element-ui',
+    '@/plugins/mint-ui',
     { src: '~/plugins/ga.js', ssr: false }
   ],
   build: {
-    vendor: ['axios', 'element-ui']
+    vendor: ['axios', 'element-ui', 'mint-ui']
   },
   loading: { color: '#41B883' }
 }

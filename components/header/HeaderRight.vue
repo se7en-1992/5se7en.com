@@ -2,7 +2,7 @@
   <div class="headerRight">
     <ul class="headerRight__Ul">
       <li class="headerRight__Ul__Li">
-        <a class="headerRight__Ul__Li__Btn" href="https://github.com/se7en-1992" target="_blank">{{ $store.state.headerRight.github }}</a>
+        <a class="headerRight__Ul__Li__Btn" href="https://github.com/se7en-1992/5se7en.com" target="_blank">{{ $store.state.headerRight.github }}</a>
       </li>
       <li class="headerRight__Ul__Li">
         <a class="headerRight__Ul__Li__Btn" href="//shang.qq.com/wpa/qunwpa?idkey=eda53cb638ce0db6c31bd17953c597573702c92d568a4223d13895767797a25a" target="_blank">{{ $store.state.headerRight.qq }}</a>

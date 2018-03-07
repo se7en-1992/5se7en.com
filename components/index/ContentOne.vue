@@ -3,7 +3,7 @@
     <div class="ContentOne__github ContentOne__div">
       <dl class="ContentOne__github__dl">
         <dt class="ContentOne__github__dl__dt">{{ $store.state.contentOne.github }}</dt>
-        <dd><a href="https://github.com/se7en-1992" target="_blank"><img src="~/static/github.jpg" style="width: 90px;"></a></dd>
+        <dd><a href="https://github.com/se7en-1992/5se7en.com" target="_blank"><img src="~/static/github.jpg" style="width: 90px;"></a></dd>
       </dl>
     </div>
     <div class="ContentOne__like ContentOne__div">
@@ -140,25 +140,116 @@ export default {
       color: #a40000;
     }
   }
+  @keyframes bgChange {
+    100% {
+      background: url(~/static/zan.png) no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  @keyframes spanShow {
+    0% {
+      top: 80px;
+      z-index: 0;
+    }
+    90% {
+      top: 10px;
+      z-index: 0;
+    }
+    100% {
+      top: 0;
+      z-index: -1;
+    }
+  }
+  @media (max-width: 991px) {
+    margin: 3vh 0px;
+    height: 17vh;
+    overflow: hidden;
+    &__div{
+      width: 33%;
+      float: left;
+      height: 17vh;
+    }
+    &__github{
+      text-align: center;
+      // line-height: 41px;
+      border-right: 1px solid #a40000;
+      &__dl{
+        &__dt{
+          font-size: 14px;
+          font-weight: bold;
+          color: #a40000;
+        }
+      }
+    }
+    &__like{
+      text-align: center;
+      border-right: 1px solid #a40000;
+      position: relative;
+      &__Abtn{
+        display: inline-block;
+        border: 0;
+        width: 15vh;
+        height: 15vh;
+        color: #fff;
+        line-height: 26vh;
+        outline: 0;
+        font-family: cursive;
+        cursor: pointer;
+      }
+      &__AbtnBefore{
+        background: url(~/static/like.png) no-repeat;
+        background-size: 100% 100%;
+        font-family: cursive;
+        font-size: 16px;
+      }
+      &__AbtnAfter{
+        background: url(~/static/like.png) no-repeat;
+        background-size: 100% 100%;
+        animation: bgChange .5s;
+      }
+      &__Spanbtn{
+        position: absolute;
+        top: 12vh;
+        left: 52%;
+        color: #fff;
+        z-index: -1;
+      }
+      &__SpanbtnShow{
+        z-index: -1;
+        animation: spanShow .5s forwards;
+      }
+    }
+    &__views{
+      text-align: center;
+      // line-height: 55px;
+      &__dt,&__dd{
+        font-size: 14px;
+        font-weight: bold;
+        color: #a40000;
+      }
+    }
+    @keyframes bgChange {
+      100% {
+        background: url(~/static/zan.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    @keyframes spanShow {
+      0% {
+        top: 12vh;
+        z-index: 0;
+      }
+      90% {
+        top: 1.5vh;
+        z-index: 0;
+      }
+      100% {
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
 
 }
-@keyframes bgChange {
-  100% {
-    background: url(~/static/zan.png) no-repeat;
-  }
-}
-@keyframes spanShow {
-  0% {
-    top: 80px;
-    z-index: 0;
-  }
-  90% {
-    top: 10px;
-    z-index: 0;
-  }
-  100% {
-    top: 0;
-    z-index: -1;
-  }
-}
+
 </style>

@@ -57,5 +57,46 @@
       }
     }
   }
+  @media (max-width: 991px) {
+    margin: 0 auto;
+    margin-top: 0vh;
+    overflow: hidden;
+    background: none;
+    width:100%;
+    &__h3{
+      color: #a40000;
+      font-size: 20px;
+      line-height: 12vh;
+      text-align: center;
+      font-weight: bold;
+    }
+    &__service{
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      &__div{
+        width: 100%;
+        float: left;
+        background: #a40000;
+        height: 31vh;
+        ul{
+          padding: 2vh 10vw;
+          li{
+            color: #fff;
+            font-size: 14px;
+            margin-left: 0vh;
+            line-height: 5.4vh;
+            list-style-type: disc;
+            a{
+              color: #fff;
+            }
+          }
+          li:first-child{
+            margin-top: 0vh;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

@@ -2,18 +2,21 @@
   <header class="HeaderTop">
     <my-header/>
     <header-nav/>
+    <nav-sheet/>
   </header>
 </template>
 
 <script>
 import MyHeader from '~/components/header/Header.vue'
 import HeaderNav from '~/components/header/HeaderNav.vue'
+import navSheet from '~/components/header/NavSheet.vue'
 
 export default {
 
   components: {
     MyHeader,
-    HeaderNav
+    HeaderNav,
+    navSheet
   }
 }
 </script>

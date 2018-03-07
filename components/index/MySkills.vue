@@ -15,6 +15,30 @@
         <dt><a href="http://www.w3schools.com/html/html5_intro.asp"><img src="~static/HTML5.png" width="265"></a></dt>
       </dl>
     </div>
+    <div class="Skills__rewDetailMobile">
+      <mt-swipe :auto="4000" :speed="1000">
+        <mt-swipe-item>
+          <dl>
+            <dt><a href="https://nodejs.org/en/"><img src="~static/nodejs.svg"></a></dt>
+          </dl>
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <dl>
+            <dt><a href="https://nuxtjs.org/"><nuxt-logo/></a></dt>
+          </dl>
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <dl>
+            <dt><a href="https://vuejs.org/"><img src="~static/vue.png"></a></dt>
+          </dl>
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <dl>
+            <dt><a href="http://www.w3schools.com/html/html5_intro.asp"><img src="~static/HTML5.png"></a></dt>
+          </dl>
+        </mt-swipe-item>
+      </mt-swipe>
+    </div>
   </div>
 </template>
 
@@ -47,6 +71,10 @@ export default {
   &__rewDetail{
     overflow: hidden;
     margin-top: 20px;
+    display: block;
+    @media (max-width: 991px) {
+      display: none;
+    }
     dl{
       width: 269px;
       height: 269px;
@@ -60,6 +88,48 @@ export default {
         a{
           img{
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    margin: 0 auto;
+    width:100%;
+    margin-top: 20px;
+    height: 58vh;
+    background: url(~static/glory.png) no-repeat #e7e6e6;
+    background-size: 100% 100%;
+    position: static;
+    h3{
+      color: #a40000;
+      font-size: 20px;
+      line-height: 12vh;
+      text-align: center;
+      font-weight: bold;
+    }
+    &__rewDetailMobile{
+      overflow: hidden;
+      margin-top: 0;
+      display: block;
+      height: 45vh;
+      @media (min-width: 992px) {
+        display: none;
+      }
+      dl{
+        width: 70vw;
+        height: 70vw;
+        float: none;
+        margin-left: 15vw;
+        text-align: center;
+        dt{
+          width: 70vw;
+          height: 70vw;
+          border:2px solid #a40000;
+          a{
+            img{
+              width: 100%;
+            }
           }
         }
       }

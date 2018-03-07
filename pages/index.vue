@@ -18,6 +18,9 @@ import MyRecommend from '~/components/index/MyRecommend.vue'
 import MySkills from '~/components/index/MySkills.vue'
 
 export default {
+  computed: {
+    visible() { return this.$store.state.visibleHeader }
+  },
   components: {
     MyBanner,
     MyContent,

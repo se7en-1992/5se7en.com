@@ -24,7 +24,7 @@ npm run dev
 
 ## 友情提示
 
-- [N-blog](https://github.com/nswbmw/N-blog)(一个不错的Nodejs + Express + MongoDB)
+- [N-blog](https://github.com/nswbmw/N-blog)(一个不错的Nodejs + Express + MongoDB入门项目)
 - [vue2.0官网文档](https://vuejs.org/)
 - [nuxtjs官方文档](https://nuxtjs.org/)
 - [vue2-elm](https://github.com/bailicangdu/vue2-elm)(一个不错的vue2.0个人项目)
