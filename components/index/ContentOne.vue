@@ -107,12 +107,12 @@ export default {
       color: #fff;
       line-height: 180px;
       outline: 0;
-      font-family: cursive;
+
       cursor: pointer;
     }
     &__AbtnBefore{
       background: url(~/static/like.png) no-repeat;
-      font-family: cursive;
+
       font-size: 16px;
     }
     &__AbtnAfter{
@@ -193,13 +193,13 @@ export default {
         color: #fff;
         line-height: 26vh;
         outline: 0;
-        font-family: cursive;
+
         cursor: pointer;
       }
       &__AbtnBefore{
         background: url(~/static/like.png) no-repeat;
         background-size: 100% 100%;
-        font-family: cursive;
+
         font-size: 16px;
       }
       &__AbtnAfter{
