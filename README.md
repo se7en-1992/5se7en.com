@@ -14,7 +14,7 @@ nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
 - ajax的出现，促成了Web 2.0时代的来临
 - nodejs的出现，让前端能做的更多，让js不仅仅只是浏览器端的语言。
 这里为什么要说这个呢，有些前端开发者会说node不是做后端的吗？我为什么要学nodejs呢？其实随着前端的发展，尤其是node出现，前端发展日新月异，各种自动化工具，框架层出不穷。很多都是依赖node。node不仅仅只是用来拿来写后端，可以这么说，当前时间如果你对node毫无知晓，也不去学的话，可以说是已经被前端浪潮推到沙滩上了。
-- 本项目用的是node中使用最多的express前端web框架，官网的demo是这么形容的> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:
+- 本项目用的是node中使用最多的express前端web框架，官网的demo是这么形容的=> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:  没错可以说是非常极速了，我的个人网站服务器是阿里云1核1g学生版机，网站除了第一次打开稍微慢点，后面可以说得上是光速了。比我以前使用的任何框架都要极速。
 
 ## 开发环境
 
