@@ -1,7 +1,7 @@
 ## 5se7en.com
 
 nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
-项目地址：https://5se7en.com/
+项目线上地址：https://5se7en.com/
 
 ## 注意事项
 
@@ -10,7 +10,7 @@ nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
 
 ## 技术选型
 
-这里先说2句题外话，谈一谈对前端开发产生了深远影响的两个时间点<br>
+这里先说两句题外话，谈一谈对前端开发产生了深远影响的两个时间点<br>
 - ajax的出现，促成了Web 2.0时代的来临
 - nodejs的出现，让前端能做的更多，让js不仅仅只是浏览器端的语言。
 这里为什么要说这个呢，有些前端开发者会说node不是做后端的吗？我为什么要学nodejs呢？其实随着前端的发展，尤其是node出现，前端发展日新月异，各种自动化工具，框架层出不穷。很多都是依赖node。node不仅仅只是用来拿来写后端，可以这么说，当前时间如果你对node毫无知晓，也不去学的话，那么你已经被前端浪潮所覆盖了。
@@ -24,7 +24,9 @@ nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
         - 简而言之就是前端一开始骚不起来，后来node和MVC/MVVM（Vue,React,Angular）的出现前端开始骚起来了，搞独立，把本应要做成服务端渲染的东西也做成了SPA，现在新技术又出来了，要及时发现错误，进行改正。前后端分离是趋势，既然都分开了，总不能还让后端去渲染，那咱们前端自己想办法做服务端渲染吧，于是服务端渲染框架也就出现了。
     - 为什么选用nuxtjs?
         - 一开始我用的服务端渲染是学习[N-blog](https://github.com/nswbmw/N-blog)利用nodejs的express+ejs模版渲染做的，效果其实也还不错，里面的代码并没有完全的组件化，我做的项目还使用的jQuery,这多low啊，那我怎么能扔，我肯定要换个技术来玩。（这里没有贬低jQuery的意思，我觉得jQuery是个很不错的JavaScript库，曾经也可以说是一统前端了，包括现在，不会用jQuery的前端基本上没几个，但是怎么说呢，jQuery在慢慢沉寂，操作dom在现在对比下来并不是一个最优的选择了。）前端在不断发展，我们要做的就是选择最优。
-        - 在vue官网中也对nuxtjs做了强力的推荐，再加上nuxtjs的github上express模版demo介绍[ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:看到这个我就选了这个框架了。没错就是他了
+        - 在vue官网中也对nuxtjs做了强力的推荐，再加上nuxtjs的github上express模版demo介绍[ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:看到这个我就选了这个框架了。没错就是他了.
+        - nuxtjs结合vue2、Webpack、vue-loader、babel-loader、vuex、Vue-Meta
+        - 不需要在配置繁琐的webpack配置,vue-loader自动生成路由，只需要在pages目录下创建文件就是自动生成对应的路由文件
 
 ## 开发环境
 
@@ -53,9 +55,6 @@ npm run dev
 - nuxt详细的入门教程这里不做详细的介绍，[官方文档](https://nuxtjs.org/)讲解的已经非常详细了。这里简单介绍一下项目目录作用
 
 ### nuxt目录介绍
-
-- config
-    - 此目录并不是nuxt自身目录而是一些项目经验促使我添加此目录从来更加方便的去管理和使用喔在项目中所需要的变量。
 
 - assets
     - 如果你的静态资源文件需要 Webpack 做构建编译处理，可以放到 assets 目录，否则可以放到 static 目录中去。
@@ -94,7 +93,12 @@ npm run dev
 
 ### nuxt配置介绍
 
+- config
+    - 此目录并不是nuxt自身目录而是一些项目经验促使我添加此目录从来更加方便的去管理和使用在项目中所需要的变量。
+    - NEWRELIC_KEY:[newrelic](https://newrelic.com/)的密钥，newrelic是服务器端性能监控的一款软件
+    - TIMBER_KEY:[timber](https://timber.io/)的密钥，timber是一种云日志记录系统，简单的来说就是纪录线上的一些日志
+    - SENTRY_PROJECT_ID/SENTRY_PUBLIC_KEY/SENTRY_PRIVATE_KEY:[Sentry](https://sentry.io)的项目id,公钥,私钥，Sentry是一个开源的实时错误报告工具
+    - porductionProxy/developmentProxy: 是nuxt的axios模块代理请求的路径设置
 
-
-
+- [nuxt.config.js](https://nuxtjs.org/guide/configuration)
 
