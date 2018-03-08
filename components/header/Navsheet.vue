@@ -2,47 +2,47 @@
   <nav class="Navsheet" :class="{'Navsheet--hidden': visible}" @touchmove.prevent>
     <div class="Navsheet__Box">
       <ul class="Navsheet__Box__Menu">
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.house.to">
             {{ $store.state.navList.house.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.project.to">
             {{ $store.state.navList.project.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.share.to">
             {{ $store.state.navList.share.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.start.to">
             {{ $store.state.navList.start.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.improve.to">
             {{ $store.state.navList.improve.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.tools.to">
             {{ $store.state.navList.tools.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.frame.to">
             {{ $store.state.navList.frame.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.html5.to">
             {{ $store.state.navList.html5.text }}
           </nuxt-link>
         </li>
-        <li class="Navsheet__Box__Menu__Item">
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.contact.to">
             {{ $store.state.navList.contact.text }}
           </nuxt-link>
@@ -57,6 +57,9 @@
 export default {
   computed: {
     visible() { return this.$store.state.visibleHeader }
+  },
+  methods: {
+    toggle() { this.$store.commit('toggle', 'visibleHeader') }
   }
 }
 </script>
