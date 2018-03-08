@@ -99,6 +99,21 @@ npm run dev
     - TIMBER_KEY:[timber](https://timber.io/)的密钥，timber是一种云日志记录系统，简单的来说就是纪录线上的一些日志
     - SENTRY_PROJECT_ID/SENTRY_PUBLIC_KEY/SENTRY_PRIVATE_KEY:[Sentry](https://sentry.io)的项目id,公钥,私钥，Sentry是一个开源的实时错误报告工具
     - porductionProxy/developmentProxy: 是nuxt的axios模块代理请求的路径设置
+    - 其实我在项目启动的时候还使用了[pm2](http://pm2.keymetrics.io/)有express项目经验的人用过都说好，有日志记录状态监控等，真的很好用。
 
 - [nuxt.config.js](https://nuxtjs.org/guide/configuration)
 
+- [.editorconfig](http://editorconfig.org/)
+    - EditorConfig是一套用于统一代码格式的解决方案
+
+- [.eslintrc.js](https://eslint.org/)
+    - ESLint是一个应用广泛的 JavaScript 代码检查工具
+
+- [gitignore](https://git-scm.com/docs/gitignore)
+    - git提交忽略项配置文件
+
+- [newrelic.js](https://newrelic.com/)
+    - newrelic配置文件
+
+- start.js
+    - express启动入口文件，开发环境直接使用nuxt启动并没有走start.js，生产环境用[pm2](http://pm2.keymetrics.io/)启动的该文件
