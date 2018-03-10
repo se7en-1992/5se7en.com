@@ -34,14 +34,14 @@ npm run dev
 
 ### nuxt目录介绍
 
-- [assets]()
-- [components]()
-- [layouts]()
-- [middleware]()
-- [pages]()
-- [plugins]()
-- [static]()
-- [store]()
+- [assets](https://github.com/se7en-1992/5se7en.com/blob/master/book/assets.md)
+- [components](https://github.com/se7en-1992/5se7en.com/blob/master/book/components.md)
+- [layouts](https://github.com/se7en-1992/5se7en.com/blob/master/book/layouts.md)
+- [middleware](https://github.com/se7en-1992/5se7en.com/blob/master/book/middleware.md)
+- [pages](https://github.com/se7en-1992/5se7en.com/blob/master/book/pages.md)
+- [plugins](https://github.com/se7en-1992/5se7en.com/blob/master/book/plugins.md)
+- [static](https://github.com/se7en-1992/5se7en.com/blob/master/book/static.md)
+- [store](https://github.com/se7en-1992/5se7en.com/blob/master/book/store.md)
 
 
 ### nuxt配置介绍
