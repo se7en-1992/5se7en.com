@@ -11,7 +11,7 @@ nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
 ## 技术选型
 
 - [为什么要使用服务端渲染](https://github.com/se7en-1992/5se7en.com/blob/master/book/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B8%B2%E6%9F%93.md)
-- [为什么选用nuxtjs]()
+- [为什么选用nuxtjs](https://github.com/se7en-1992/5se7en.com/blob/master/book/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E7%94%A8nuxtjs.md)
 
 ## 开发环境
 
