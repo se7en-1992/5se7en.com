@@ -1,11 +1,12 @@
 ## 5se7en.com
 
-nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
-项目线上地址：https://5se7en.com/
+nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目
+github项目地址: https://github.com/se7en-1992/5se7en.com
+项目线上地址: https://5se7en.com/
 
 ## 注意事项
 
-- node>=v8.0.0+ (nuxt1.0.0以上版本的node版本号必须大于v8.0.0否则启动的时候会报错)<br>
+- node>=v8.0.0+ (nuxt1.0.0以上版本的node版本号必须大于v8.0.0否则启动的时候会报错)
 - 若要测试游戏登录请点击前往[套马游戏](https://www.hybjf.com/game/20170925Activity)注册一个账号
 
 ## 技术选型
