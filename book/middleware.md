@@ -11,3 +11,7 @@ middleware 目录用于存放应用的中间件
     - 匹配页面
 
 [关于 middleware 目录的更多信息](https://nuxtjs.org/guide/routing#middleware)
+
+
+
+下一节：[pages](https://github.com/se7en-1992/5se7en.com/blob/master/book/pages.md)

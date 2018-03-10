@@ -7,3 +7,7 @@
 该目录名为Nuxt.js保留的，不可更改。
 
 [关于 layouts 目录的更多信息](https://nuxtjs.org/guide/views#layouts)
+
+
+
+下一节：[middleware](https://github.com/se7en-1992/5se7en.com/blob/master/book/middleware.md)

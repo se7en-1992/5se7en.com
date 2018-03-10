@@ -6,3 +6,6 @@
 - nuxtjs结合vue2、Webpack、vue-loader、babel-loader、vuex、Vue-Meta
 - 不需要在配置繁琐的webpack配置,vue-loader自动生成路由，只需要在pages目录下创建文件就是自动生成对应的路由文件
 - 我的个人网站服务器是阿里云1核1g学生版机，网站除了第一次打开稍微慢点，后面可以说得上是光速了。比我以前使用的任何框架都要极速。
+
+
+下一节：[assets](https://github.com/se7en-1992/5se7en.com/blob/master/book/assets.md)

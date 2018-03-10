@@ -11,3 +11,7 @@
 [关于 plugins 目录的更多信息](https://nuxtjs.org/guide/plugins)
 
 [plugins配置信息](https://nuxtjs.org/api/configuration-plugins)
+
+
+
+下一节：[static](https://github.com/se7en-1992/5se7en.com/blob/master/book/static.md)

@@ -7,3 +7,7 @@
 此页面的.vue文件都具有[asyncData](https://nuxtjs.org/api/)、[fech](https://nuxtjs.org/api/pages-fetch)方法。
 
 [关于 pages 目录的更多信息](https://nuxtjs.org/guide/views#pages)
+
+
+
+下一节：[plugins](https://github.com/se7en-1992/5se7en.com/blob/master/book/plugins.md)

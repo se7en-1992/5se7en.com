@@ -7,3 +7,7 @@
 举个例子: /static/robots.txt 映射至 /robots.txt
 
 [关于 static 目录的更多信息](https://nuxtjs.org/guide/assets#static)
+
+
+
+下一节：[store](https://github.com/se7en-1992/5se7en.com/blob/master/book/store.md)
