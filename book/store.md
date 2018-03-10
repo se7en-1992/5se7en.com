@@ -6,3 +6,7 @@ store 目录用于组织应用的 Vuex 状态树 文件。 Nuxt.js 框架集成�
 Nuxt.js 内置引用了 vuex 模块，所以不需要额外安装。
 
 [关于 store 目录的更多信息](https://nuxtjs.org/guide/vuex-store)
+
+
+
+下一节：[config](https://github.com/se7en-1992/5se7en.com/blob/master/book/config.md)
