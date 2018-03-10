@@ -21,7 +21,12 @@ nuxtjs+express+vue2.0+vuex搭建的服务端渲染个人网站项目.<br>
 - vue: `^2.5.3`
 
 ```bash
+git clone https://github.com/se7en-1992/5se7en.com.git
+
+cd 5se7en.com
+
 npm install
+
 npm run dev
 ```
 
