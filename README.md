@@ -53,15 +53,11 @@ npm run dev
 
 - [config](https://github.com/se7en-1992/5se7en.com/blob/master/book/config.md)
 - [nuxt.config.js](https://nuxtjs.org/guide/configuration)
-- [editorconfig](http://editorconfig.org/)EditorConfig是一套用于统一代码格式的解决方案
-- [eslintrc.js](https://eslint.org/)
-ESLint是一个应用广泛的 JavaScript 代码检查工具
-- [gitignore](https://git-scm.com/docs/gitignore)
-git提交忽略项配置文件
-- [newrelic.js](https://newrelic.com/)
-newrelic配置文件
-- [start.js](https://github.com/se7en-1992/5se7en.com/blob/master/start.js)
-express启动入口文件，开发环境直接使用nuxt启动并没有走start.js，生产环境用[pm2](http://pm2.keymetrics.io/)启动的该文件
+- [editorconfig](http://editorconfig.org/)  EditorConfig是一套用于统一代码格式的解决方案
+- [eslintrc.js](https://eslint.org/)  ESLint是一个应用广泛的 JavaScript 代码检查工具
+- [gitignore](https://git-scm.com/docs/gitignore)  git提交忽略项配置文件
+- [newrelic.js](https://newrelic.com/)  newrelic配置文件
+- [start.js](https://github.com/se7en-1992/5se7en.com/blob/master/start.js)  express启动入口文件，开发环境直接使用nuxt启动并没有走start.js，生产环境用[pm2](http://pm2.keymetrics.io/)启动的该文件
 
 
 ## 友情提示
