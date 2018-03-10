@@ -33,7 +33,7 @@ npm run dev
 - [vue2.0官网文档](https://vuejs.org/)
 - [nuxtjs官方文档](https://nuxtjs.org/)
 - [vue2-elm](https://github.com/bailicangdu/vue2-elm)(一个不错的vue2.0个人项目)
-- [nuxtjs.org](https://github.com/nuxt/nuxtjs.org)
+- [nuxt.js](https://github.com/nuxt/nuxt.js)
 
 ## nuxt介绍
 
