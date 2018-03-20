@@ -26,7 +26,8 @@ git clone https://github.com/se7en-1992/5se7en.com.git
 
 cd 5se7en.com
 
-npm install
+# install dependencies
+npm install # Or yarn install*[see note below]
 
 npm run dev
 ```
