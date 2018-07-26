@@ -7,8 +7,9 @@ export default {
     }
     try {
       app.$axios.setHeader('Cookie', req.Cookie)
-      const [ likes, clicks ] = await Promise.all([getHomeDataOne(app), getHomeDataTwo(app)])
-      console.log(likes)
+      const likes = await app.$axios.$get('https://www.hybjf.com/api/fortuneChur/top.html')
+      const clicks = await app.$axios.$get('https://www.hybjf.com/api/fortuneChur/detail.html?id=1417')
+      // const [ likes, clicks ] = await Promise.all([getHomeDataOne(app), getHomeDataTwo(app)])
       const contentOne = {
         likes: likes[0].clicks,
         id: likes[0].id,
