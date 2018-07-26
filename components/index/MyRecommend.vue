@@ -4,10 +4,26 @@
       <div class="Recommend__left">
         <h3>推荐项目</h3>
         <ul>
-          <li>nuxt/nuxt.js</li>
-          <li>《Node.js 包教不包会》 by alsotang</li>
-          <li>bailicangdu/vue2-elm</li>
-          <li>全栈增长工程师指南</li>
+          <li>
+            <a class="Recommend__left__link" href="https://github.com/nswbmw/N-blog" target="_blank">
+              N-blog
+            </a>
+          </li>
+          <li>
+            <a class="Recommend__left__link" href="https://github.com/nuxt/nuxt.js" target="_blank">
+              nuxt/nuxt.js
+            </a>
+          </li>
+          <li>
+            <a class="Recommend__left__link" href="https://github.com/bailicangdu/vue2-elm" target="_blank">
+              vue2-elm
+            </a>
+          </li>
+          <li>
+            <a class="Recommend__left__link" href="https://github.com/ruanyf/jstraining" target="_blank">
+              全栈工程师培训材料
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -15,10 +31,26 @@
       <div class="Recommend__left">
         <h3>个人文章</h3>
         <ul>
-          <li>--</li>
-          <li>--</li>
-          <li>--</li>
-          <li>--</li>
+          <li>
+            <nuxt-link class="Recommend__left__link" to="/improve/proto">
+              javascript的继承及原型链
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link class="Recommend__left__link" to="/improve/closure">
+              javascript的作用域链和闭包
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link class="Recommend__left__link" to="/share/https">
+              网站如何免费开通https协议？
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link class="Recommend__left__link" to="/share/cache">
+              前端缓存机制
+            </nuxt-link>
+          </li>
         </ul>
       </div>
 
@@ -59,6 +91,9 @@
         line-height: 50px;
         margin-left: 150px;
       }
+    }
+    &__link {
+      color: #a40000;
     }
   }
   &__disadvan{

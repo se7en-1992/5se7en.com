@@ -1,10 +1,14 @@
-/* global options:true */
-
 import Vue from 'vue'
 import Raven from 'raven-js'
 import RavenVue from 'raven-js/plugins/vue'
 
-Raven
-  .config(`https://${options.public_key}@sentry.io/${options.project_id}`)
-  .addPlugin(RavenVue, Vue)
-  .install()
+export default function (ctx, inject) {
+  // Inject Raven to the context as $raven
+  ctx.$raven = Raven
+  inject('raven', Raven)
+
+  Raven
+    .config('<%= options.public_dsn %>', <%= serialize(options.config) %>)
+    .addPlugin(RavenVue, Vue)
+    .install()
+}

@@ -1,5 +1,5 @@
 <template>
-  <section class="Nginx">
+  <section class="Https">
     <h3>网站如何免费开通https协议？</h3>
     <article>
       <h4>什么是https？</h4>
@@ -98,7 +98,7 @@
 </script>
 
 <style lang="scss" scoped>
-.Nginx{
+.Https{
   width: 1365px;
   padding: 100px 50px;
   margin: 0 auto;

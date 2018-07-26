@@ -3,6 +3,9 @@ node_modules
 
 # config
 # production.js
+modules/addlike.js
+modules/autoReward.js
+modules/timer.js
 
 # tools
 # tools

@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { likeAdd } from '../../service/getData'
+import { likeAdd } from '~/service/getData'
 
 export default {
   data() {
@@ -44,20 +44,21 @@ export default {
     visible() { return this.$store.state.visibleLike }
   },
   methods: {
-    toggle() {
+    async toggle() {
       if (this.$store.state.visibleLike) {
         this.dialogVisible = true;
       }else{
         this.$store.commit('toggle', 'visibleLike')
-        const contentOne = {}
-        //console.log(this.$store.state.contentOne.id);
-        likeAdd(this.$store.state.contentOne.id)
-        .then((res) => {
-          contentOne.likes = res.detail.clicks + 1
+        try {
+          const res = await likeAdd(this, this.$store.state.contentOne.id)
+          const contentOne = {}
+          contentOne.likes = res.data.detail.clicks + 1
           contentOne.id = this.$store.state.contentOne.id
           contentOne.clicks = this.$store.state.contentOne.views
           this.$store.commit('setContentOne', contentOne)
-        })
+        } catch (e) {
+          console.log('接口请求出错-/v1/fortuneChur/top.html')
+        }
       }
     },
     handleClose(done) {

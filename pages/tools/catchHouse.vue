@@ -3,11 +3,12 @@
     <p><input type="text"  placeholder="请输入用户名" id="userName" v-model="username" /></p>
     <p><input type="password" placeholder="请输入密码" id="password" v-model="password" /></p>
     <p><button id="start" @click="verification" :disabled="disabled">启动</button></p>
+    <p><button @click="verification('activity')" :disabled="disabled" style="display: none;">启动</button></p>
   </section>
 </template>
 
 <script>
-import { doLogin,getCount,shareFriends,signIn,initGame,playGame } from '../../service/getData'
+import { doLogin,getCount,shareFriends,signIn,initGame,playGame,buyTimes,initActivityGame,playActivityGame,endActivityGame } from '~/service/getData'
 
 export default {
   head: {
@@ -25,12 +26,14 @@ export default {
         fullscreenLoading: false,
         disabled: false,
         uuid: "",
-        uluToken: ""
+        uluToken: "",
+        animals: []
     }
   },
   methods: {
-    doLogin(loading) {
-      doLogin(this.username,this.password).then(res => {
+    doLogin(loading,activity) {
+      doLogin(this,this.username,this.password).then(res => {
+        res = res.data
         if (res.result) {
           this.$message({
             message: res.msg,
@@ -40,7 +43,11 @@ export default {
               this.disabled = false;
             }
           });
-          this.getInfo(loading)
+          if (activity == 'activity') {
+            this.buy(loading)
+          }else{
+            this.getInfo(loading)
+          }
         }else{
           this.$message({
             message: res.msg,
@@ -57,14 +64,18 @@ export default {
           console.log(err)
       })
     },
-    openFullScreen2() {
+    openFullScreen2(activity) {
       const loading = this.$loading({
         lock: true,
         text: 'Loading',
         spinner: 'el-icon-loading',
         background: 'rgba(0, 0, 0, 0.7)'
       });
-      this.doLogin(loading);
+      if (activity == 'activity') {
+        this.doLogin(loading,activity);
+      }else{
+        this.doLogin(loading);
+      }
     },
     elAlert(msg, title) {
       this.$alert(msg, title, {
@@ -75,18 +86,23 @@ export default {
         }
       });
     },
-    verification() {
+    verification(activity) {
       this.disabled = true;
       if (this.username == "" || this.password == "") {
         this.elAlert("请输入正确的用户名和密码", "提示");
         this.disabled = false;
         return;
       }else{
-        this.openFullScreen2()
+        if (activity == 'activity') {
+          this.openFullScreen2(activity)
+        }else{
+          this.openFullScreen2()
+        }
       }
     },
     getInfo(loading) {
-      getCount().then(res => {
+      getCount(this).then(res => {
+        res = res.data
         if (res.result) {
           if (res.isShare ==0) {
             this.wxshare(loading);
@@ -112,7 +128,8 @@ export default {
       })
     },
     wxshare(loading) {
-      shareFriends().then(res => {
+      shareFriends(this).then(res => {
+        res = res.data
         if (res.result) {
           this.getInfo(loading);
         }else{
@@ -124,7 +141,8 @@ export default {
       })
     },
     sign(loading) {
-      signIn().then(res => {
+      signIn(this).then(res => {
+        res = res.data
         if (res.result) {
           this.getInfo(loading);
         }else{
@@ -136,7 +154,8 @@ export default {
       })
     },
     init(loading) {
-      initGame().then(res => {
+      initGame(this).then(res => {
+        res = res.data
         if (res.result) {
           this.uluToken = res.uluToken;
           if (res.levelType == 1) {
@@ -176,7 +195,8 @@ export default {
       })
     },
     play(uuid, uluToken, loading) {
-      playGame(uuid,uluToken).then(res => {
+      playGame(this,uuid,uluToken).then(res => {
+        res = res.data
         let me = this
         if (res.result) {
           if (res.msg == 'success') {
@@ -209,6 +229,105 @@ export default {
       }).catch(err => {
 
       })
+    },
+    async buy(loading) {
+      try {
+        const buyTimesDate = await buyTimes(this)
+        if (buyTimesDate.result) {
+          this.activityInit(loading);
+        }else{
+          loading.close()
+          this.elAlert(buyTimesDate.msg, "提示");
+        }
+      } catch (e) {
+        console.log('购买接口请求出错')
+      }
+    },
+    async activityInit(loading) {
+      let me = this
+      try {
+        const initActivityGameDate = await initActivityGame(this)
+        if (initActivityGameDate.result) {
+          me.uluToken = initActivityGameDate.uluToken;
+          me.animals = initActivityGameDate.animals;
+          if (initActivityGameDate.levelType == 8 || initActivityGameDate.levelType == 7) {
+            for (var i = 0; i < me.animals.length; i++) {
+              if (me.animals[i].alias == "redHorse") {
+                me.uuid = me.animals[i].uuid;
+                me.animals.splice(i, 1);
+                break;
+              }
+            }
+            me.activityplay(me.uuid,me.uluToken,loading);
+          }
+        }else{
+          loading.close()
+          me.elAlert(initActivityGameDate.msg, "提示");
+        }
+      } catch (e) {
+        console.log('积分初始化接口请求出错')
+      }
+    },
+    async activityplay(uuid,uluToken,loading) {
+      let me = this
+      if (me.animals.length <= 43) {
+        me.end(uluToken,loading)
+        return
+      }
+      try {
+        const playActivityGameDate = await playActivityGame(this,uuid,uluToken)
+        if (playActivityGameDate.result) {
+          for (var i = 0; i < me.animals.length; i++) {
+            if (me.animals[i].alias == "redHorse") {
+              me.uuid = me.animals[i].uuid;
+              me.animals.splice(i, 1);
+              break;
+            }
+          }
+          if (me.uuid) {
+            setTimeout(function(){
+              me.activityplay(me.uuid,me.uluToken,loading);
+              me.uuid = '';
+            },1500)
+          }else{
+            // me.elAlert("红马已套完", "提示");
+            // loading.close()
+            for (var i = 0; i < me.animals.length; i++) {
+              if (me.animals[i].alias == "blackHorse") {
+                me.uuid = me.animals[i].uuid;
+                me.animals.splice(i, 1);
+                break;
+              }
+            }
+            if (me.uuid) {
+              setTimeout(function(){
+                me.activityplay(me.uuid,me.uluToken,loading);
+                me.uuid = '';
+              },1500)
+            }else{
+              me.elAlert("棕马已套完", "提示");
+              loading.close()
+            }
+          }
+        }else{
+          loading.close()
+          me.elAlert(playActivityGameDate.msg, "提示");
+        }
+      } catch (e) {
+        console.log('积分触发接口请求出错')
+      }
+    },
+    async end(uluToken,loading) {
+      let me = this
+      try {
+        const endActivityGameDate = await endActivityGame(this,uluToken)
+        if (endActivityGameDate.result) {
+          loading.close()
+          me.elAlert("本次共获得"+endActivityGameDate.score+"积分", "提示");
+        }
+      } catch (e) {
+        console.log('积分结束接口请求出错')
+      }
     }
 
   }
