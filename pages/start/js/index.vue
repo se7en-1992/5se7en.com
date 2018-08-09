@@ -2,13 +2,8 @@
   <section class="startList">
     <ul>
       <li>
-        <nuxt-link to="/start/css">
-          html、css基础
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/start/js">
-          javascript基础
+        <nuxt-link to="/start/js/typeof">
+          javascript的操作符typeof
         </nuxt-link>
       </li>
     </ul>

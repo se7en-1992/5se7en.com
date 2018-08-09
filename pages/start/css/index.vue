@@ -1,14 +1,14 @@
 <template>
-  <section class="startList">
+  <section class="cssList">
     <ul>
       <li>
-        <nuxt-link to="/start/css">
-          html、css基础
+        <nuxt-link to="/start/css/boxmodel">
+          CSS盒模型
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/start/js">
-          javascript基础
+        <nuxt-link to="/start/css/boxmodel">
+          CSS实现垂重水平居中的方法
         </nuxt-link>
       </li>
     </ul>
@@ -20,7 +20,7 @@
 </script>
 
 <style lang="scss" scoped>
-.startList{
+.cssList{
   padding: 50px;
   @media (max-width: 991px) {
     padding-left: 0;
