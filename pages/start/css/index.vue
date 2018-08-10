@@ -7,9 +7,9 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/start/css/boxmodel">
+        <a href="https://segmentfault.com/a/1190000006108996" target="_blank">
           CSS实现垂重水平居中的方法
-        </nuxt-link>
+        </a>
       </li>
     </ul>
   </section>
