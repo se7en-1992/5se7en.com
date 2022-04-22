@@ -34,11 +34,6 @@
           </nuxt-link>
         </li>
         <li class="Nav__Box__Menu__Item">
-          <nuxt-link class="Nav__Box__Menu__Item__Link" :to="$store.state.navList.html5.to">
-            {{ $store.state.navList.html5.text }}
-          </nuxt-link>
-        </li>
-        <li class="Nav__Box__Menu__Item">
           <nuxt-link class="Nav__Box__Menu__Item__Link" :to="$store.state.navList.contact.to">
             {{ $store.state.navList.contact.text }}
           </nuxt-link>

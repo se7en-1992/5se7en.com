@@ -1,6 +1,6 @@
 <template>
   <div class="Content">
-    <content-one/>
+    <!-- <content-one/> -->
     <content-two/>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="PartnerShips">
-    <h3>特别鸣谢</h3>
-    <partner-pic/>
+    <!-- <h3>特别鸣谢</h3> -->
+    <!-- <partner-pic/> -->
     <footer-pic/>
     <footer-bottom/>
   </div>

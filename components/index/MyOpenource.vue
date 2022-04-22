@@ -4,7 +4,9 @@
     <div class="Openource__service">
       <div class="Openource__service__div">
         <ul>
-          <li v-for="(repositorie, index) in $store.state.openource.repositories">
+          <li
+            v-for="(repositorie, index) in $store.state.openource.repositories"
+            :key="index">
             <a :href=" repositorie.link ">{{ repositorie.description }}</a>
           </li>
         </ul>

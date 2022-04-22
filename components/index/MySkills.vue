@@ -3,20 +3,30 @@
     <h3> My Skills</h3>
     <div class="Skills__rewDetail">
       <dl>
+        <dt><a href="https://vuejs.org/" target="_blank"><img src="~static/vue.png"></a></dt>
+      </dl>
+      <dl>
+        <dt><a href="https://reactjs.org/" target="_blank"><img src="~static/React.png"></a></dt>
+      </dl>
+      <dl>
         <dt><a href="https://nodejs.org/en/"><img src="~static/nodejs.svg" style="margin-top: 30px;"></a></dt>
       </dl>
       <dl>
         <dt><a href="https://nuxtjs.org/" target="_blank"><nuxt-logo/></a></dt>
       </dl>
-      <dl>
-        <dt><a href="https://vuejs.org/" target="_blank"><img src="~static/vue.png"></a></dt>
-      </dl>
-      <dl>
-        <dt><a href="http://www.w3schools.com/html/html5_intro.asp"><img src="~static/HTML5.png" width="265"></a></dt>
-      </dl>
     </div>
     <div class="Skills__rewDetailMobile">
       <mt-swipe :auto="4000" :speed="1000">
+        <mt-swipe-item>
+          <dl>
+            <dt><a href="https://vuejs.org/"><img src="~static/vue.png"></a></dt>
+          </dl>
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <dl>
+            <dt><a href="https://reactjs.org/" target="_blank"><img src="~static/React.png"></a></dt>
+          </dl>
+        </mt-swipe-item>
         <mt-swipe-item>
           <dl>
             <dt><a href="https://nodejs.org/en/"><img src="~static/nodejs.svg"></a></dt>
@@ -25,16 +35,6 @@
         <mt-swipe-item>
           <dl>
             <dt><a href="https://nuxtjs.org/"><nuxt-logo/></a></dt>
-          </dl>
-        </mt-swipe-item>
-        <mt-swipe-item>
-          <dl>
-            <dt><a href="https://vuejs.org/"><img src="~static/vue.png"></a></dt>
-          </dl>
-        </mt-swipe-item>
-        <mt-swipe-item>
-          <dl>
-            <dt><a href="http://www.w3schools.com/html/html5_intro.asp"><img src="~static/HTML5.png"></a></dt>
           </dl>
         </mt-swipe-item>
       </mt-swipe>

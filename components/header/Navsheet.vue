@@ -3,8 +3,8 @@
     <div class="Navsheet__Box">
       <ul class="Navsheet__Box__Menu">
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.house.to">
-            {{ $store.state.navList.house.text }}
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.home.to">
+            {{ $store.state.navList.home.text }}
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
@@ -35,11 +35,6 @@
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
           <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.frame.to">
             {{ $store.state.navList.frame.text }}
-          </nuxt-link>
-        </li>
-        <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.html5.to">
-            {{ $store.state.navList.html5.text }}
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">

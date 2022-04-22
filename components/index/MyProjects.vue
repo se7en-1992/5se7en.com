@@ -1,14 +1,14 @@
 <template>
   <div class="Projects">
-    <h3 class="Projects__h3">部分项目介绍</h3>
+    <h3 class="Projects__h3">工作经历</h3>
     <div class="Projects__proLists">
       <template v-for="(project, index) in $store.state.projects.part">
-        <a :href=" project.url " class="Projects__proLists__linkId" target="_blank">
+        <a :href=" project.url " class="Projects__proLists__linkId" target="_blank" :key="index">
           <dl class="Projects__proLists__linkId__dl">
             <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>
             <dd>
               <p class="Projects__proLists__linkId__dl__title">{{ project.name }}</p>
-              <p class="Projects__proLists__linkId__dl__detail">版本情况:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">{{ project.version }}</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">{{ project.technology }}</span></p>
+              <p class="Projects__proLists__linkId__dl__detail">担任职务:&nbsp;<span class="Projects__proLists__linkId__dl__detail__date">{{ project.version }}</span>&nbsp; <br>运用技术:&nbsp;<span class="Projects__proLists__linkId__dl__detail__Apr">{{ project.technology }}</span></p>
             </dd>
           </dl>
         </a>
@@ -17,7 +17,7 @@
     <div class="Projects__proListsMobile">
         <mt-swipe :auto="4000" :speed="1000">
           <template v-for="(project, index) in $store.state.projects.part">
-            <mt-swipe-item>
+            <mt-swipe-item :key="index">
               <a :href=" project.url " class="Projects__proListsMobile__linkId">
                 <dl class="Projects__proListsMobile__linkId__dl">
                   <dt><img src="~/static/product.jpg" alt="5se7en" title="5se7en"></dt>

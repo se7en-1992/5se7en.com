@@ -1,14 +1,13 @@
 <template>
   <div class="ContentTwo">
     <div class="ContentTwo__div">
-      <div class="ContentTwo__div__pic">
+      <!-- <div class="ContentTwo__div__pic">
         <dl class="ContentTwo__div__pic__dl">
-          <dt><img src="~/static/se7en.jpg" alt="se7en"></dt>
           <dd class="ContentTwo__div__pic__dl__dd">{{ $store.state.contentTwo.position }}<br>
             {{ $store.state.contentTwo.name }}
           </dd>
         </dl>
-      </div>
+      </div> -->
       <div class="ContentTwo__div__introduction">
         <h3 class="ContentTwo__div__introduction__h3">{{ $store.state.contentTwo.description.self }}</h3>
         <p class="ContentTwo__div__introduction__p">{{ $store.state.contentTwo.description.pOne }}</p>
@@ -48,18 +47,26 @@
       }
     }
     &__introduction{
-      float: left;
+      display: flex;
       height: 406px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      flex-direction: column;
       &__h3{
         color: #fff;
+        width: 100%;
+        text-align: left;
         font-size: 30px;
-        margin-top: 110px;
         font-weight: bold;
       }
       &__p{
+        width: 100%;
+        text-align: left;
         color: #fff;
         font-size: 18px;
         line-height: 36px;
+        text-indent: 36px;
       }
       p:nth-of-type(1){
         margin-top: 50px;
@@ -67,7 +74,7 @@
     }
   }
   @media (max-width: 991px) {
-    height: 113.6vh;
+    // height: 113.6vh;
     background: none;
     &__div{
       width: 100%;

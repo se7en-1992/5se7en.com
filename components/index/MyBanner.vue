@@ -10,6 +10,7 @@
 
 <style lang="scss" scoped>
 .Banner {
+  display: flex;
   &__img {
     width: 100%;
   }
