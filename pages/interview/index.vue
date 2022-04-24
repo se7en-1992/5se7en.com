@@ -8,7 +8,7 @@
       </li>
       <li>
         <nuxt-link to="/interview/ali">
-          蚂蚁金服
+          蚂蚁金服面经
         </nuxt-link>
       </li>
       <li>
@@ -18,7 +18,7 @@
       </li>
       <li>
         <nuxt-link to="/interview/pingan">
-          平安银行
+          平安银行面经
         </nuxt-link>
       </li>
     </ul>

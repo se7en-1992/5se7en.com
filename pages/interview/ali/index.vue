@@ -2,19 +2,12 @@
   <section class="btteDanceList">
     <ul>
       <li>
-        <nuxt-link to="/interview/bytedance/one">
-          字节跳动一面(2022-04-12)
+        <nuxt-link to="/interview/ali/one">
+          蚂蚁金服一面(2022-04-20)
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/interview/bytedance/two">
-          字节跳动二面(2022-04-18)
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/interview/bytedance/three">
-          字节跳动三面(2022-04-22)
-        </nuxt-link>
+        一面面试官说过了暂未接到二面通知
       </li>
     </ul>
   </section>

@@ -2,19 +2,12 @@
   <section class="btteDanceList">
     <ul>
       <li>
-        <nuxt-link to="/interview/bytedance/one">
-          字节跳动一面(2022-04-12)
+        <nuxt-link to="/interview/bilibili/one">
+          哔哩哔哩一面(2022-04-20)
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/interview/bytedance/two">
-          字节跳动二面(2022-04-18)
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/interview/bytedance/three">
-          字节跳动三面(2022-04-22)
-        </nuxt-link>
+        哔哩哔哩二面(2022-04-24)
       </li>
     </ul>
   </section>

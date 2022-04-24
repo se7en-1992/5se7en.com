@@ -23,7 +23,7 @@
     <article>
       <h4>如何开通https？</h4>
       <h5>申请证书</h5>
-      <p><a href="https://freessl.org" target="_blank">FreeSSL.org - 一个申请免费证书的网站</a></p>
+      <p><a href="https://freessl.cn" target="_blank">FreeSSL.CN - 一个申请免费证书的网站</a></p>
       <p><a href="https://yq.aliyun.com/articles/225669?spm=5176.11065265.1996646101.searchclickresult.1b9a9ebeJL3YCE" target="_blank">FreeSSL教程</a></p>
       <h5>上传证书</h5>
       <p>将申请得到的证书以及私钥文件放到你的服务器/ssl/目录下</p>

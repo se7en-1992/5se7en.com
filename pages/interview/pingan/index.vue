@@ -2,18 +2,24 @@
   <section class="btteDanceList">
     <ul>
       <li>
-        <nuxt-link to="/interview/bytedance/one">
-          字节跳动一面(2022-04-12)
+        初筛-写一个交易模块的列表、下单、历史订单的需求，打包整个项目发送(2022-04-11)
+      </li>
+      <li>
+        平安集团的测评-IQ测评、个性测评、胜任力测评(2022-04-17)
+      </li>
+      <li>
+        <nuxt-link to="/interview/pingan/one">
+          平安银行一面(2022-04-18)
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/interview/bytedance/two">
-          字节跳动二面(2022-04-18)
+        <nuxt-link to="/interview/pingan/one">
+          平安银行二面(2022-04-19)
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/interview/bytedance/three">
-          字节跳动三面(2022-04-22)
+        <nuxt-link to="/interview/pingan/one">
+          平安银行三面(2022-04-23)
         </nuxt-link>
       </li>
     </ul>
