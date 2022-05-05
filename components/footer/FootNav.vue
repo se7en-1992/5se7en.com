@@ -2,9 +2,9 @@
   <div class="FootNav">
     <ul>
       <li><a href="/">Homepage</a></li>
-      <li><a href="/projects">project</a></li>
-      <li><a href="/share">Sharing</a></li>
-      <li><a href="/contact" style="border: 0;">contact me</a></li>
+      <li><a href="/interview">Interview</a></li>
+      <li><a href="/improve">Improve</a></li>
+      <li><a href="/algorithm" style="border: 0;">Algorithm</a></li>
     </ul>
   </div>
 </template>

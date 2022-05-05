@@ -2,36 +2,37 @@
   <section class="btteDanceList">
     <ul>
       <li>
-        <nuxt-link to="/improve/other/url">
-          用户输入一个url到页面呈现的过程
-        </nuxt-link>
+        个人及项目了解
       </li>
       <li>
-        http1.0/http1.1/http2.0的区别
+        印象最深刻（自豪）的一个项目
       </li>
       <li>
-        https如何保证安全
+        印象最差的一个项目
       </li>
       <li>
-        性能优化做过哪些
+        wepack的complier和compalation的区别
       </li>
       <li>
-        浏览器的渲染流程
+        给你一个动画特别多的一个C端页面，你会怎么去实现
       </li>
       <li>
-        Vue的实例化过程
+        层合成相关的问题（如何提升合成层、如何预防层爆炸）
       </li>
       <li>
-        Vue的Diff算法和React Diff算法的区别
+        CSS硬件加速
       </li>
       <li>
-        事件循环
+        现代浏览器的线程架构
       </li>
       <li>
-        手写promise.all(笔试)
+        settimeout 和 requestanimationframe的区别
       </li>
       <li>
-        数组扁平化实现(笔试)
+        canvas的性能优化
+      </li>
+      <li>
+        团队管理方面的问题
       </li>
     </ul>
   </section>

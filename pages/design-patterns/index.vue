@@ -4,17 +4,17 @@
     <!-- <ul>
       <li>
         <nuxt-link class="" to="/share/https">
-            网站如何免费开通https协议？
+          网站如何免费开通https协议？
         </nuxt-link>
       </li>
       <li>
         <nuxt-link class="" to="/share/cache">
-            前端缓存机制
+          前端缓存机制
         </nuxt-link>
       </li>
       <li>
         <nuxt-link class="" to="/share/vueTree">
-           vue的递归组件
+          vue的递归组件
         </nuxt-link>
       </li>
     </ul> -->

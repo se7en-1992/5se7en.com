@@ -1,14 +1,9 @@
 <template>
-  <section class="btteDanceList">
+  <section class="startList">
     <ul>
       <li>
-        <nuxt-link to="/interview/ali/one">
-          蚂蚁金服一面(2022-04-20)
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/interview/ali/two">
-          蚂蚁金服二面(2022-04-29)
+        <nuxt-link to="/improve/other/url">
+          用户输入一个url到页面呈现的过程
         </nuxt-link>
       </li>
     </ul>
@@ -16,11 +11,13 @@
 </template>
 
 <script>
+export default {
 
+}
 </script>
 
 <style lang="scss" scoped>
-.btteDanceList{
+.startList{
   padding: 50px;
   @media (max-width: 991px) {
     padding-left: 0;

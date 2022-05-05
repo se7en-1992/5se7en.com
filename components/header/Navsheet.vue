@@ -8,13 +8,8 @@
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.project.to">
-            {{ $store.state.navList.project.text }}
-          </nuxt-link>
-        </li>
-        <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.share.to">
-            {{ $store.state.navList.share.text }}
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.interview.to">
+            {{ $store.state.navList.interview.text }}
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
@@ -28,18 +23,28 @@
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.tools.to">
-            {{ $store.state.navList.tools.text }}
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.vue.to">
+            {{ $store.state.navList.vue.text }}
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.frame.to">
-            {{ $store.state.navList.frame.text }}
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.react.to">
+            {{ $store.state.navList.react.text }}
           </nuxt-link>
         </li>
         <li class="Navsheet__Box__Menu__Item" @click="toggle">
-          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.contact.to">
-            {{ $store.state.navList.contact.text }}
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.webpack.to">
+            {{ $store.state.navList.webpack.text }}
+          </nuxt-link>
+        </li>
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.algorithm.to">
+            {{ $store.state.navList.algorithm.text }}
+          </nuxt-link>
+        </li>
+        <li class="Navsheet__Box__Menu__Item" @click="toggle">
+          <nuxt-link class="Navsheet__Box__Menu__Item__Link" :to="$store.state.navList.designPatterns.to">
+            {{ $store.state.navList.designPatterns.text }}
           </nuxt-link>
         </li>
       </ul>

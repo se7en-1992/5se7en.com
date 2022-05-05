@@ -19,13 +19,14 @@ const store = () => new Vuex.Store({
     },
     navList: {
       home: { text: '首页', to: '/' },
-      project: { text: '前端面经', to: '/interview' },
-      share: { text: '技术分享', to: '/share' },
+      interview: { text: '前端面经', to: '/interview' },
       start: { text: '前端基础', to: '/start' },
       improve: { text: '前端综合', to: '/improve' },
-      tools: { text: '工程化相关', to: '/tools' },
-      frame: { text: '框架学习', to: '/frame' },
-      contact: { text: '联系反馈', to: '/contact' }
+      vue: { text: 'Vue系列', to: '/vue' },
+      react: { text: 'React系列', to: '/react' },
+      webpack: { text: 'Webpack', to: '/webpack' },
+      algorithm: { text: '算法系列', to: '/algorithm' },
+      designPatterns: { text: '设计模式', to: '/design-patterns' }
     },
     contentOne: {
       github: 'Github',

@@ -7,7 +7,19 @@
         </nuxt-link>
       </li>
       <li>
-        哔哩哔哩二面(2022-04-24)
+        <nuxt-link to="/interview/bilibili/two">
+          哔哩哔哩二面(2022-04-24)
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/interview/bilibili/three">
+          哔哩哔哩三面(2022-04-28)
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/interview/bilibili/four">
+          哔哩哔哩四面(2022-04-30)
+        </nuxt-link>
       </li>
     </ul>
   </section>

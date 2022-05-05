@@ -16,6 +16,11 @@
           字节跳动三面(2022-04-22)
         </nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="/interview/bytedance/four">
+          字节跳动四面(2022-04-25)
+        </nuxt-link>
+      </li>
     </ul>
   </section>
 </template>
