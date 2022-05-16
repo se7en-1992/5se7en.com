@@ -116,6 +116,8 @@
         这边文章说的十分详细还有对应的demo，更有助大家理解，
         后续也会补充至浏览器专栏。
       </p>
+      <h4>5. 总结</h4>
+      <p class="indent-64">URL解析 => DNS查询 => 浏览器缓存 => TCP链接 => HTTP请求 => HTTP响应 => 页面渲染 => 合成层</p>
     </article>
   </section>
 </template>
