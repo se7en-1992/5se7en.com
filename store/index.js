@@ -46,6 +46,7 @@ const store = () => new Vuex.Store({
     },
     projects: {
       part: [
+        {name: '字节跳动', url: '#', version: '前端开发工程师', technology: 'React全家桶'},
         {name: '龙湖集团', url: '#', version: '前端开发工程师', technology: 'Vue全家桶'},
         {name: '中骏集团', url: '#', version: '前端开发工程师', technology: 'React全家桶'},
         {name: '好友邦金服', url: '#', version: '前端开发工程师', technology: 'Vue全家桶'}
