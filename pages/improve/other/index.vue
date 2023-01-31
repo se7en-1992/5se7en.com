@@ -6,6 +6,11 @@
           用户输入一个url到页面呈现的过程
         </nuxt-link>
       </li>
+      <li>
+        <a href="https://juejin.cn/post/7177661774160724029" target="_blank">
+          PWA技术在游戏落地中的探索
+        </a>
+      </li>
     </ul>
   </section>
 </template>
